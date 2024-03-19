@@ -1,0 +1,26 @@
+Tugas Membuat ERD dan membuat perintah SQL untuk mendefinisikan table.
+
+Entitas : (Nasabah, Akun, Transaksi)
+
+Atribut : 
+	1. nasabah: 
+  	  - id_nasabah INT PRIMARY KEY
+          - nama VARCHAR(50)
+          - alamat TEXT
+          - no_telp VARCHAR(20)
+
+	2. akun:
+          - id_akun INT PRIMARY KEY
+  	  - id_nasabah (FK)
+  	  - jenis_akun VARCHAR(50)
+  	  - saldo NUMERIC (10, 2)
+
+	3. transaksi:
+          - id_transaksi INT PRIMARY KEY
+  	  - id_akun (FK)
+  	  - tipe_transaksi VARCHAR(100)
+  	  - jumlah NUMERIC(10, 2)
+  	  - tanggal DATE
+
+Relasi Antar Entitas : Nasabah -> Akun (one to many)
+		       Akun -> Transaksi (one to many)
